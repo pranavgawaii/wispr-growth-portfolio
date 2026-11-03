@@ -1,0 +1,6 @@
+node_modules/
+dist/
+resources/
+public/
+package-lock.json
+src/data/github-contributions-fallback.json

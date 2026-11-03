@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <meta name="author" content="Pranav Gawai" />
+    <meta name="theme-color" content="#FAFAFA" />
+    <meta name="color-scheme" content="light" />
+    <meta name="robots" content="index,follow" />
+
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('portfolio-theme');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Open Graph -->
+
+    <!-- Twitter -->
+
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Outfit:wght@400;500;600;700;800;900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Pranav Gawai | Engineer and AI builder</title>
+    <meta
+      name="description"
+      content="AI products, developer tools and a growth proposal built with Wispr in mind."
+    />
+    <link rel="canonical" href="https://growth.pranavx.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pranav Gawai" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:url" content="https://growth.pranavx.in/" />
+    <meta property="og:title" content="Pranav Gawai | Engineer and AI builder" />
+    <meta
+      property="og:description"
+      content="AI products, developer tools and a growth proposal built with Wispr in mind."
+    />
+    <meta property="og:image" content="https://growth.pranavx.in/social/portfolio.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Pranav Gawai. Built with intent." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@pranavgawai_" />
+    <meta name="twitter:title" content="Pranav Gawai | Engineer and AI builder" />
+    <meta
+      name="twitter:description"
+      content="AI products, developer tools and a growth proposal built with Wispr in mind."
+    />
+    <meta name="twitter:image" content="https://growth.pranavx.in/social/portfolio.png" />
+    <meta name="twitter:image:alt" content="Pranav Gawai. Built with intent." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body
+    class="bg-[#FAFAFA] dark:bg-[#09090B] text-[#09090B] dark:text-[#FAFAFA] font-grotesk antialiased selection:bg-neutral-900 selection:text-white dark:selection:bg-neutral-100 dark:selection:text-neutral-900"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

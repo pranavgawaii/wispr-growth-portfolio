@@ -1,0 +1,63 @@
+{
+  "name": "wispr-growth-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "build": "tsc && vite build",
+    "preview": "npm start",
+    "test": "node --test tests/*.test.mjs",
+    "check:unused": "knip",
+    "format": "prettier --ignore-path config/prettierignore --write src server api shared tests config README.md package.json tsconfig.json vite.config.ts postcss.config.js tailwind.config.js vercel.json .github/workflows/check.yml",
+    "format:check": "prettier --ignore-path config/prettierignore --check src server api shared tests config README.md package.json tsconfig.json vite.config.ts postcss.config.js tailwind.config.js vercel.json .github/workflows/check.yml",
+    "check": "npm run build && npm test && npm run lint && npm run check:unused && npm run format:check",
+    "lint": "oxlint --config config/oxlint.json src server api shared tests --deny-warnings",
+    "start": "node server/index.mjs --production"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.9.0",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "knip": "^6.44.1",
+    "oxlint": "^1.90.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
+  },
+  "knip": {
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "entry": [
+      "api/**/*.js",
+      "tests/**/*.test.mjs"
+    ],
+    "project": [
+      "src/**/*.{ts,tsx,css,mjs}",
+      "server/**/*.mjs",
+      "api/**/*.js",
+      "shared/**/*.mjs",
+      "tests/**/*.mjs"
+    ]
+  }
+}
