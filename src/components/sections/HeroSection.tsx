@@ -1,3 +1,4 @@
+import ThumbnailButton from '../ui/thumbnail-button-video-player';
 import { AnimatedLink } from '../ui/AnimatedLink';
 import React, { useEffect, useRef } from 'react';
 import { ThemeToggle } from '../ui/ThemeToggle';
@@ -530,6 +531,9 @@ export const HeroSection: React.FC = () => {
               </span>
             </a>
           ))}
+        </div>
+        <div id="explanation-video" className="hero-video-link-wrap">
+          <ThumbnailButton youtubeId="KFPjwPiN1ZI" title="Watch the explanation" />
         </div>
         <div className="hero-wispr-link-wrap">
           <a href="/growth-plan/" className="wispr-hero-availability">

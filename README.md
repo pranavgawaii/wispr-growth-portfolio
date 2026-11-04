@@ -65,6 +65,10 @@ Profiles, photos, preferences and practice history stay in browser storage. Loca
 
 Vercel Analytics is optional and disabled unless `VITE_ANALYTICS_ENABLED=true`. Query strings and hashes are removed before analytics events are sent.
 
+The hero video sends `video_open` when the thumbnail is clicked and `video_play` on actual playback, once per modal opening (pause/resume does not add plays). Both events include only `video_id` and `placement: hero`; they count actions, not unique people. Development previews and builds without the analytics flag send no events. Playback uses the YouTube IFrame API, loaded only when the modal opens; if the API fails, a standard embed remains available but playback cannot be counted.
+
+To see counts after deployment, enable Web Analytics in the Vercel project, set `VITE_ANALYTICS_ENABLED=true` in its production build environment, redeploy, and open **Analytics → Events**. Vercel custom events require a Pro or Enterprise plan. Tracking starts only after deployment and cannot recover past clicks; blockers may prevent some events.
+
 ## Deployment and share previews
 
 `vercel.json` provides hosting configuration for the static frontend and serverless API. Configure `SITE_URL` with your public HTTPS origin and connect a dedicated Redis database using the server-only variables in `.env.example`.
