@@ -17,6 +17,13 @@ export const socialPages = [
     ['Pranav Gawai.', 'Built with intent.'],
   ),
   page(
+    '/setup/',
+    'The $3,000 question | Pranav Gawai',
+    'A practical setup proposal: a dependable laptop, AI tools and room to build useful experiments.',
+    'setup-question',
+    ['The $3,000 question.', 'A setup for useful experiments.'],
+  ),
+  page(
     '/projects/',
     'Selected projects | Pranav Gawai',
     'Explore the AI products and developer tools I have built, with workflows and architecture.',

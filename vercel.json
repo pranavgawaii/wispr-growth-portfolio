@@ -67,6 +67,21 @@
       "source": "/betweenwood/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/the-3000-question",
+      "destination": "/setup/",
+      "permanent": true
+    },
+    {
+      "source": "/the3000/the-question",
+      "destination": "/setup/",
+      "permanent": true
+    },
+    {
+      "source": "/the-$3,000-question",
+      "destination": "/setup/",
+      "permanent": true
     }
   ]
 }

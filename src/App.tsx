@@ -18,6 +18,7 @@ import { VoiceLabSection } from './components/sections/VoiceLabSection';
 import { GitHubHeatmap } from './components/ui/GitHubHeatmap';
 import TechStackSection from './components/sections/TechStackSection';
 import { WisprClosing } from './components/sections/WisprClosing';
+import { SetupPage } from './features/setup/SetupPage';
 import { Footer } from './components/layout/Footer';
 
 const App: React.FC = () => {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
   const known =
     [...socialPages, ...projectSectionPages].some((page) => page.path === path) ||
     ['/main/', '/hero/'].includes(path);
+  if (path === '/setup/') return <SetupPage />;
   if (!known) return <NotFound />;
 
   if (window.location.pathname.startsWith('/one-breath'))
